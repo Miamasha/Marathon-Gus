@@ -31,12 +31,13 @@
 							Спеціальний бойовий гусак із біолабораторій України. Пишаюся своїми подвигами, бороню Батьківщину та
 							підтримую позитивний дух народу. Слава Україні!
 						</p>
-						<button type="button">Запустити гуся</button>
+						<button type="button" id="open-form-modal-btn">Запустити гуся</button>
 					</main>
 					<img src="./img/gus.svg" alt="Бандерогусь" />
 				</div>
 			</div>
 		</section>
+
 		<section class="fact-page">
 			<div class="fact-wrapper">
 				<img src="./img/trezub.svg" alt="Герб України" class="trezub" />
@@ -64,6 +65,7 @@
 				</ul>
 			</div>
 		</section>
+
 		<section class="footer-page">
 			<div class="fact-wrapper">
 				<img src="./img/trezub.svg" alt="Герб України" class="trezub" />
@@ -75,16 +77,16 @@
 			</div>
 		</section>
 
-		<section class="modal-wrapper">
+		<section class="modal-wrapper" id="form-modal">
 			<div class="modal-form">
-				<button type="button" class="icon-close">
+				<button type="button" class="close-btn">
 					<img src="./img/icon-close.svg" alt="icon-close" />
 				</button>
 				<div class="form-content">
 					<img src="./img/trezub.svg" alt="Герб України" class="trezub" />
 					<h3>Поділися, будь ласка, поштою</h3>
 					<p>та запиши гуся до бандерозагону</p>
-					<form action="#" class="form">
+					<form action="#" class="form" id="form">
 						<div class="modal-field">
 							<label class="modal-label" for="user-name">Ім'я*</label>
 							<div class="input-wrap">
@@ -111,14 +113,14 @@
 							</div>
 						</div>
 					</form>
-					<button type="button">Запустити гуся</button>
+					<button type="button" id="launch-btn">Запустити гуся</button>
 				</div>
 			</div>
 		</section>
 
-		<section class="modal-wrapper">
+		<section class="modal-wrapper" id="success-modal">
 			<div class="modal-success">
-				<button type="button" class="icon-close">
+				<button type="button" class="close-btn">
 					<img src="./img/icon-close.svg" alt="icon-close" />
 				</button>
 				<div class="success-content">
@@ -128,5 +130,6 @@
 				</div>
 			</div>
 		</section>
+		<script src="./scripts/form.js"></script>
 	</body>
 </html>

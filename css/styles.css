@@ -235,7 +235,7 @@ main button:hover,
 	height: 368px;
 	width: 572px;
 }
-.icon-close {
+.close-btn {
 	margin-left: 524px;
 	background-color: transparent;
 	cursor: pointer;
