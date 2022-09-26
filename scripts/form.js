@@ -5,6 +5,7 @@ const successModal = document.querySelector("#success-modal");
 const form = document.querySelector("#form");
 
 const openFormModalBtn = document.querySelector("#open-form-modal-btn");
+// const launchBtn = document.querySelector("#launch-btn");
 const closeBtns = document.querySelectorAll(".close-btn");
 
 openFormModalBtn.addEventListener("click", () => {
@@ -43,7 +44,7 @@ form.addEventListener("submit", e => {
 		.then(() => {
 			closeFormModal();
 			setTimeout(openSuccessModal, 700);
-			setTimeout(closeSuccessModal, 3000);
+			// setTimeout(closeSuccessModal, 3000);
 		})
 		.catch(error => console.log("Sending form failed"));
 });
