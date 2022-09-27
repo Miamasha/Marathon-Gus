@@ -5,7 +5,7 @@ const successModal = document.querySelector("#success-modal");
 const form = document.querySelector("#form");
 
 const openFormModalBtn = document.querySelector("#open-form-modal-btn");
-const launchBtn = document.querySelector("#launch-btn");
+// const launchBtn = document.querySelector('#launch-btn');
 const closeBtns = document.querySelectorAll(".close-btn");
 
 openFormModalBtn.addEventListener("click", () => {
@@ -41,17 +41,16 @@ function clearFormFields() {
 }
 
 function showGooseAnim() {
+	const targetContainer = document.querySelector(".modal-form");
 	const gusImage = document.createElement("img");
-
 	gusImage.setAttribute("src", "./img/gus-anim.gif");
 	gusImage.classList.add("gus-anim");
 
-	form.appendChild(gusImage);
+	targetContainer.appendChild(gusImage);
 
-	setTimeout(() => {
-		gusImage.removeAttribute("src", "./img/gus-anim.gif");
-		form.removeChild(gusImage);
-	}, 4000);
+	setTimeout(2000, () => {
+		targetContainer.removeChild(gusImage);
+	});
 }
 
 form.addEventListener("submit", e => {
@@ -68,10 +67,10 @@ form.addEventListener("submit", e => {
 
 			setTimeout(() => {
 				closeFormModal();
-				setTimeout(openSuccessModal, 500);
-				setTimeout(closeSuccessModal, 7000);
+				setTimeout(openSuccessModal, 100);
+				// setTimeout(closeSuccessModal, 4000);
 				clearFormFields();
-			}, 3000);
+			}, 4000);
 		})
 		.catch(error => console.log("Sending form failed"));
 });
